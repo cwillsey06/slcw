@@ -1,11 +1,8 @@
 slcw
 ====
-a collection of my (Coltrane Willsey's) patched suckless software
+a collection of my (cwillsey06's) patched suckless software
 
 Installation
 ------------
-Edit config.mk to match your local setup (most software is installed into
-the /usr/local namespace by default).
-
-    make clean install
+Use `build.sh` to clone the required git repositories, apply patches, and compile
 
