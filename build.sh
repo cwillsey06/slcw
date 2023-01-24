@@ -17,13 +17,17 @@ build() {
 		printf '\n%s\n' "-> build: $DIR"
 	
 		git clone $(cat src.txt) src/
-	
+
 		for DIFF in *.diff ; do
 			cd src
 			if [ -f "$file" ]; then
 				patch -p1 < $DIFF
 			fi
-			make 
+			make
+
+			mkdir -p $SRC_DIR/dist/
+			cp $(find . -maxdepth 1 -type f -executable) $SRC_DIR/dist/
+
 			cd ..
 		done
 	
