@@ -1,0 +1,11 @@
+slcw
+====
+a collection of my (Coltrane Willsey's) patched suckless software
+
+Installation
+------------
+Edit config.mk to match your local setup (most software is installed into
+the /usr/local namespace by default).
+
+    make clean install
+
